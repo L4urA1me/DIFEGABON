@@ -1,0 +1,135 @@
+﻿@import url("layout.css");
+body {
+	font-family: Verdana, sans-serif;;
+	font-size: 1.3em;
+	color: #000;
+	background-image: url("images/BACKGROUND/fond (2).webp");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+#container {
+	width: 95%;
+	margin: 0 auto;
+	background-color: #001fa8;
+	border-top-right-radius: 30px;	
+	border-top-left-radius: 30px;
+	border-bottom-left-radius: 30px;
+	border-bottom-right-radius: 30px;
+}
+#masthead {
+	text-align: right;
+	overflow: auto;
+	width: 100%;
+	background-color: #d6d6a0;
+	border-top-right-radius: 30px;
+	border-top-left-radius: 30px;
+	padding-bottom: 2.5px;
+}
+#sidebar {
+	float: left;
+	width: 154px;
+	background-color: #1088c0;
+	position: relative;
+	clear: both;
+	display: inline;
+}
+#content {
+	float: left;
+	width: 83%;
+	padding: 10px;
+	overflow: auto;
+	background-color: #fff;
+	margin: 0px;
+	position: relative;
+}
+#content img {
+	display: block;
+}
+#footer {
+	clear: both;
+	width: 100%;
+	background-color: #d6d6a0;
+	padding: 0px;
+	overflow: auto;
+	margin-top: 0px;
+	border-bottom-right-radius: 30px;
+	border-bottom-left-radius: 30px;
+}
+#masthead img {
+	float: left;
+}
+#masthead p{
+	color: #000000;
+	margin: 0px;
+	padding-right: 435px;
+}
+#masthead h1 {
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-size: 2em;
+	color: #1f00a8;
+	text-align: right;
+	margin: 0;
+	margin-top: 0px;
+	margin-right: 0px;
+	padding-right: 450px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+/* Styles pour les éléments de navigation */
+#sidebar ul {
+	list-style-type: none;
+	width: 100%;
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+#sidebar li {
+	display: block;
+	border: 1px solid #cdf;
+}
+#sidebar a {
+	font-size: larger;
+	font-weight: bold;
+	text-decoration: none;
+	color: #ffffff;
+	display: block;
+	padding: 5px;
+	border-bottom: 5px solid #1f00a8;
+	
+}
+#sidebar a:hover {
+	font-weight: bold;
+	text-decoration: none;
+	color: #ffffff;
+	border-bottom: 1px solid #1f00a8;
+	background-color: #001fa8;
+}
+/* Styles pour le pied de page */
+#footer p {
+	font-size: 0.9em;
+	text-align: center;
+	margin: 0px;
+	padding: 2px;
+}
+#footer a {
+	color: #333;
+	text-decoration: underline;
+}
+#footer a:hover {
+	color: #333;
+	text-decoration: none;
+}
+a {
+	color: #04b;
+	text-decoration: underline;
+}
+a:hover {
+	color: #333;
+	text-decoration: underline;
+}
+.style_bold {
+	font-weight: bold;
+}
+.style_italic {
+	font-style: italic;
+}

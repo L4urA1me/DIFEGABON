@@ -1,0 +1,308 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- #BeginTemplate "../master.dwt" -->
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<!-- #BeginEditable "doctitle" -->
+<title> Accueil </title>
+<!-- #EndEditable -->
+<link href="style3.css" rel="stylesheet" type="text/css" />
+
+<style>
+
+	* {box-sizing: border-box}
+	body {font-family: Verdana, sans-serif; margin:0}
+	.mySlides {display: none}
+	img {vertical-align: middle;}
+	
+	/* Slideshow container */
+	.slideshow-container {
+	  max-width: 1000px;
+	  position: relative;
+	  margin: auto;
+	}
+	
+	/* Next & previous buttons */
+	.prev, .next {
+	  cursor: pointer;
+	  position: absolute;
+	  top: 50%;
+	  width: auto;
+	  padding: 16px;
+	  margin-top: -22px;
+	  color: white;
+	  font-weight: bold;
+	  font-size: 18px;
+	  transition: 0.6s ease;
+	  border-radius: 0 3px 3px 0;
+	  user-select: none;
+	}
+	
+	/* Position the "next button" to the right */
+	.next {
+	  right: 0;
+	  border-radius: 3px 0 0 3px;
+	}
+	
+	/* On hover, add a black background color with a little bit see-through */
+	.prev:hover, .next:hover {
+	  background-color: rgba(0,0,0,0.8);
+	}
+	
+	/* Caption text */
+	.text {
+	  color: #f2f2f2;
+	  font-size: 15px;
+	  padding: 8px 12px;
+	  position: absolute;
+	  bottom: 8px;
+	  width: 100%;
+	  text-align: center;
+	}
+	
+	/* Number text (1/3 etc) */
+	.numbertext {
+	  color: #f2f2f2;
+	  font-size: 12px;
+	  padding: 8px 12px;
+	  position: absolute;
+	  top: 0;
+	}
+	
+	/* The dots/bullets/indicators */
+	.dot {
+	  cursor: pointer;
+	  height: 15px;
+	  width: 15px;
+	  margin: 0 2px;
+	  background-color: #bbb;
+	  border-radius: 50%;
+	  display: inline-block;
+	  transition: background-color 0.6s ease;
+	}
+	
+	.active, .dot:hover {
+	  background-color: #717171;
+	}
+	
+	/* Fading animation */
+	.fade {
+	  animation-name: fade;
+	  animation-duration: 1.5s;
+	}
+	
+	@keyframes fade {
+	  from {opacity: .4} 
+	  to {opacity: 1}
+	}
+	
+	/* On smaller screens, decrease text size */
+	@media only screen and (max-width: 300px) {
+	  .prev, .next,.text {font-size: 11px}
+	}	
+	
+	 
+	</style>
+</head>
+
+<body>
+
+<!-- Begin Container -->
+<div id="container">
+	<!-- Begin Masthead -->
+	<div id="masthead">
+		<img alt="" height="80" src="images/logo.gif" width="155" />
+		<h1> DifeGabon </h1>
+		<p> La maitrise de l'humidité </p>
+	</div>
+	<!-- End Masthead -->
+	<!-- Begin Page Content -->
+	<div id="page_content">
+		<!-- Begin Sidebar -->
+		<div id="sidebar">
+			<ul>
+				<li><a href="Accueil.html">Accueil</a></li>
+				<li><a href="A_Propos_de.html">À propos de</a></li>
+				<li><a href="Produict.html">Produits</a></li>
+				<li><a href="Services.html">Services</a></li>
+				<li><a href="Contact.html">Contact</a></li>
+			</ul>
+		</div>
+		<!-- End Sidebar -->
+		<!-- Begin Content -->
+		<div id="content">
+			<!-- #BeginEditable "content" -->
+			<div class="slideshow-container">
+
+				<div class="mySlides fade">
+				  <div class="numbertext">1 / 3</div>
+				  <img src="images/ACC/Image 1.png" style="width:100%">
+				  <div class="text">Caption Text</div>
+				</div>
+				
+				<div class="mySlides fade">
+				  <div class="numbertext">2 / 3</div>
+				  <img src="images/ACC/Image 2.webp" style="width:100%">
+				  <div class="text">Caption Two</div>
+				</div>
+				
+				<div class="mySlides fade">
+				  <div class="numbertext">3 / 3</div>
+				  <img src="images/ACC/Image 3.webp" style="width:100%">
+				  <div class="text"style="color:black;">Maintenance et réparation</div>
+				</div>
+				
+				<a class="prev" onclick="plusSlides(-1)">❮</a>
+				<a class="next" onclick="plusSlides(1)">❯</a>
+				
+				</div>
+				<br>
+				
+				<div style="text-align:center">
+				  <span class="dot" onclick="currentSlide(1)"></span> 
+				  <span class="dot" onclick="currentSlide(2)"></span> 
+				  <span class="dot" onclick="currentSlide(3)"></span> 
+				</div>
+		
+
+		<script >
+			let slideIndex = 1;
+			showSlides(slideIndex);
+
+			function plusSlides(n) {
+showSlides(slideIndex += n);
+}
+
+			function currentSlide(n) {
+			  showSlides(slideIndex = n);
+			}
+
+			function showSlides(n) {
+			let i;
+			  let slides = document.getElementsByClassName("mySlides");
+			  let dots = document.getElementsByClassName("dot");
+			  if (n > slides.length) {slideIndex = 1}    
+			  if (n < 1) {slideIndex = slides.length}
+			  for (i = 0; i < slides.length; i++) {
+			slides[i].style.display = "none";  
+			  }
+			  for (i = 0; i < dots.length; i++) {
+			dots[i].className = dots[i].className.replace(" active", "");
+			  }
+			  slides[slideIndex-1].style.display = "block";  
+			  dots[slideIndex-1].className += " active";
+			}
+
+		</script>
+			
+			<p>
+				
+			    <h1 style="color: blue;"> L'UNIVERS DE L'HUMIDITE </h1>
+				
+				<i style="font-size: 1.6em;"><b>B</b></i>ienvenue sur notre site dédié à l'importance cruciale des appareils d'humidité industrielle. 
+				Dans le monde complexe et exigeant de l'industrie, la gestion précise de l'humidité est essentielle 
+				pour maintenir la qualité, la sécurité et l'efficacité des opérations. Notre entreprise est fière 
+				de vous offrir une gamme complète de solutions avancées pour répondre à ces besoins fondamentaux. </p>
+
+				<b style="color:blue; font-size: 2em;">Quel est alors son importance ? </b> </p>
+				<i><b>L</b></i>'humidité, cette composante fondamentale de notre environnement, est mise à profit de manière ingénieuse
+				à travers une multitude d'appareils et de technologies modernes. <br/>
+
+				L'introduction de capteurs d'humidité de pointe a révolutionné divers secteurs, permettant des avancées 
+				significatives dans la qualité de vie et la précision des processus. 
+				Prenez l'exemple <b><i style="color: #009c00;">des systèmes de climatisation intelligents</i></b>, qui ajustent automatiquement 
+				l'humidité dans les maisons et les bureaux pour créer un environnement intérieur confortable, améliorant ainsi 
+				notre bien-être et notre productivité. 
+				<table>
+					<tr>
+						<th><img class="" height="100%" src="images/ACC/00.webp" width="100%" /></th>							
+						<th><img class="" height="100%" src="images/ACC/0.1.webp" width="100%" /></th>
+						<th><img class="" height="100%" src="images/ACC/0.2.webp" width="100%" /></th>
+					</tr>
+				</table>
+
+				</p> </p> 
+				<i><b>I</b></i>maginez <b><i style="color: #fa1100">une usine de production alimentaire</i></b> où la teneur en humidité doit être rigoureusement
+				contrôlée pour éviter la détérioration des produits et garantir leur longue conservation. Nos capteurs d'humidité
+				industriels de pointe permettent aux entreprises de ce secteur de maintenir des conditions optimales, réduisant ainsi 
+				les pertes et assurant la qualité des produits finaux.
+				<table>
+					<tr>
+						<th><img class="" height="100%" src="images/ACC/ALI.webp" width="100%" /></th>							
+						<th><img class="" height="100%" src="images/ACC/ALI_0.webp" width="100%" /></th>
+						<th><img class="" height="100%" src="images/ACC/ALI_.webp" width="100%" /></th>
+					</tr>
+				</table>
+				
+				</p> </p> 
+				<i><b>D</b></i>e même, <b><i style="color: #06b8ff">dans le secteur pharmaceutique,</i></b> le respect des normes strictes de qualité est essentiel pour la sécurité des patients. 
+				Les appareils d'humidité sont indispensables pour garantir que les médicaments et les produits pharmaceutiques sont stockés 
+				et transportés dans des conditions adéquates, préservant ainsi leur efficacité.
+				<table>
+					<tr>
+						<th><img class="" height="100%" src="images/ACC/Pharma_.webp" width="100%" /></th>							
+						<th><img class="" height="100%" src="images/ACC/Pharma.webp" width="100%" /></th>
+					</tr>
+				</table>
+
+				</p> </p> 
+				<i><b>D</b></i>ans <b><i style="color: #0064d6">l'industrie de la construction</i></b>, la gestion de l'humidité est cruciale pour éviter la corrosion des matériaux et assurer
+				la durabilité des structures. Nos solutions de surveillance de l'humidité aident les entreprises de construction à maintenir 
+				des normes de qualité élevées. 
+				<table>
+					<tr>
+						<th><img class="" height="100%" src="images/ACC/Construction.webp" width="100%" /></th>							
+						<th><img class="" height="270" src="images/ACC/Constrution_.jpeg" width="100%" /></th>
+					</tr>
+				</table>
+				
+				</p>
+				<i><b>L</b></i>es appareils exploitant l'humidité jouent un rôle crucial dans divers aspects de notre vie quotidienne, 
+				que ce soit pour notre confort, notre santé ou notre durabilité environnementale. Ces exemples ne représentent qu'une petite 
+				fraction des innombrables applications qui démontrent l'importance de l'humidité dans notre monde moderne.
+
+				</p>
+				<b style="color:blue; font-size: 1.9em;">Choisir le Bon Appareil d'Humidité Industrielle</b> </p>
+
+				<i><b>L</b></i>a sélection du bon appareil d'humidité industrielle est essentielle pour garantir la qualité, la sécurité 
+				et la performance de vos opérations industrielles.  <br/> 
+				Chez <b style="color: #c0c01b;"><i>DifeGabon</i></b>, nous vous guidons dans ce processus crucial. Tout d'abord, identifiez votre secteur d'activité : <br/> 
+				par exemple, si vous travaillez dans<b><i>l'industrie agroalimentaire,</i></b>  optez pour des capteurs d'humidité précis pour maintenir la fraîcheur de vos produits. 
+				Dans <b><i>le secteur pharmaceutique,</i></b> choisissez des solutions conformes aux normes strictes de qualité. Si vous êtes dans
+				<b><i>la construction,</i></b> privilégiez des appareils résistants pour prévenir la corrosion des matériaux.
+			    </p> En outre, considérez vos besoins de surveillance en temps réel, de maintenance préventive et de dépannage rapide. 
+				<br/> En collaborant avec des partenaires fiables comme DIFE, vous pouvez être sûr de faire le choix éclairé qui propulsera votre entreprise vers le succès. 
+
+
+				</p>
+				<i style="font-size: 1.6em;"><b>E</b></i>n définitive, les appareils d'humidité industrielle sont au cœur de nombreuses industries, jouant un rôle 
+				essentiel dans la préservation de la qualité des produits, la sécurité des opérations et la durabilité des infrastructures. 
+				Notre entreprise est déterminée à fournir les outils et les services dont vous avez besoin pour maintenir des niveaux d'humidité 
+				optimaux et garantir le succès de votre entreprise. Explorez notre gamme complète de produits et découvrez comment nous pouvons 
+				vous aider à atteindre vos objectifs en matière de gestion de l'humidité industrielle.
+				
+				
+			</p>
+			<!-- #EndEditable --></div>
+		<!-- End Content --></div>
+	<!-- End Page Content -->
+	<!-- Begin Footer -->
+	<div id="footer">
+		<p><a href="Accueil.html">Accueil</a> | <a href="A_Propos_de.html">À propos 
+			de</a> | 
+			<a href="Contact.html">Contact</a> |
+			<a href="Produict.html">Produits</a> |
+			<a href="Services.html">Services</a> |<br />
+			Copyright &copy; 2023 DIFEGABON. Tous droits réservés.</p>
+		</div>
+	</div>
+	<!-- End Footer --></div>
+<!-- End Container -->
+
+</body>
+
+<!-- #EndTemplate -->
+
+</html>
